@@ -1,0 +1,8 @@
+<?php 
+	  $this->headScript()->appendScript("var baseURL = '".$this->baseUrl()."';")
+                         ->appendFile($this->baseUrl() . '/js/jquery-1.8.3.min.js')
+                         ->appendFile($this->baseUrl() . '/js/bootstrap.js')
+                         ->appendFile($this->baseUrl() . '/js/scripts.js') 
+?>
+
+<?php echo $this->headScript() ?>

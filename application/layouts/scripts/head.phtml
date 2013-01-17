@@ -1,0 +1,50 @@
+<?php if ($this->meta_title) : ?>
+	<?php $title = $this->meta_title?>
+<?php else: ?>
+	<?php $title = "Prestige - Painel Administrativo - Revenda de Veículos"?>
+<?php endif;?>
+
+<?php if ($this->meta_description) : ?>
+	<?php $meta_description = $this->meta_description?>
+<?php else: ?>
+	<?php $meta_description = "Prestige - Painel Administrativo de Revenda de Veículos"?>
+<?php endif;?>
+
+<?php if ($this->meta_keywords) : ?>
+	<?php $meta_keywords = $this->meta_keywords?>
+<?php else: ?>
+	<?php $meta_keywords = "revenda, veículos, carros, motos, caminhão" ?>
+<?php endif; ?>
+
+
+
+<?php 
+	$this->headMeta()->appendHttpEquiv('Content-Type','text/html; charset=ISO-8859-1')
+					 ->appendHttpEquiv('Content-Language', 'pt-BR')
+					 ->appendName('robots', 'noindex, nofollow')
+					 ->appendName('description', $meta_description)
+					 ->appendName('keywords', $meta_keywords)
+					 ->appendName('author', 'Prestige - administrativo @ prestige.com.br')
+					 ->appendName('resource-type', 'document')
+					 ->appendName('distribution', 'Global')
+					 ->appendName('copyright', 'prestige.com.br')
+					 ->appendName('rating', 'General');
+					
+	$this->headLink()->appendStylesheet($this->baseUrl() . '/css/reset.css')
+					 ->appendStylesheet($this->baseUrl() . '/css/normalize.css')
+					 ->appendStylesheet($this->baseUrl() . '/css/bootstrap.css')
+					 ->appendStylesheet($this->baseUrl() . '/css/styles.css')
+                     ->headLink(array('rel' => 'favicon',
+                                      'href' => $this->baseUrl() . '/favicon.ico'),
+                                      'PREPEND');
+?>
+
+
+
+
+
+
+
+<?php echo $this->headTitle($title);?>
+<?php echo $this->headMeta(); ?>
+<?php echo $this->headLink(); ?>
